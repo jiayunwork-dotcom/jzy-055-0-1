@@ -1,0 +1,8 @@
+{
+  "description": "电阻串联分压网络：5V 电压源串联两个 1kΩ 电阻，中间节点 out 笔算应为 2.5V，电压源供出电流 2.5mA。POST /dc",
+  "components": [
+    {"name": "V1", "type": "V", "nodes": ["vdd", "0"], "value": 5.0},
+    {"name": "R1", "type": "R", "nodes": ["vdd", "out"], "value": 1000.0},
+    {"name": "R2", "type": "R", "nodes": ["out", "0"], "value": 1000.0}
+  ]
+}

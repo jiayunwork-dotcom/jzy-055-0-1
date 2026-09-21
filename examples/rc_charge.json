@@ -1,0 +1,10 @@
+{
+  "description": "RC 串联充电回路：5V 经 1kΩ 给 1µF 电容充电，时间常数 tau=R*C=1ms。零初值，推 5ms（5 个 tau），末端电容电压应逼近 5V 至约 99.3%。POST /transient",
+  "components": [
+    {"name": "V1", "type": "V", "nodes": ["vdd", "0"], "value": 5.0},
+    {"name": "R1", "type": "R", "nodes": ["vdd", "cap"], "value": 1000.0},
+    {"name": "C1", "type": "C", "nodes": ["cap", "0"], "value": 1e-6, "ic": 0.0}
+  ],
+  "dt": 0.05e-3,
+  "tstop": 5e-3
+}
